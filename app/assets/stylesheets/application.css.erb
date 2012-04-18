@@ -1,0 +1,422 @@
+/*
+*Theme Name: eCarmony Basic HTML plus jQuery UI
+*Author    : Cody Duval
+*Version   : 2.0
+*
+*[Table Of Contents] 
+*
+*	01- GLOBAL ELEMENTS
+*	02- HEADER, NAV, MAIN LOGO
+*	03- MAIN STAGE AND BODY ON HOMEPAGE 
+*	04- QUESTION PAGE
+*	05- RESULTS PAGE
+*	06- FOOTER
+*	07- CSS BUTTON FROM CSS-TRICKS.COM
+*	08- MISC
+*
+*= require_self
+*= require_tree
+*/
+
+/*----------------------------------------------------------------------------- 
+=01 GLOBAL ELEMENTS
+-----------------------------------------------------------------------------*/
+
+body {
+	background:url(<%= asset_path 'firstrun-background.png' %>)repeat-x #A5A9B7;
+	padding   : 25px 0;
+}
+
+#wrapper {
+	background        :url(<%= asset_path 'background-inner.jpg' %>)repeat-x #FFFFFF;
+	margin            :0 auto;
+	padding           :10px;
+	-moz-border-radius:15px;
+	border-radius     :15px;
+	border            :1px solid #7587C3;
+}
+
+/*----------------------------------------------------------------------------- 
+=02 HEADER, NAV, MAIN LOGO
+-----------------------------------------------------------------------------*/
+
+#header {
+	height  :100px;
+	position:relative;
+	top     :10px;
+}
+
+#socialMedia {
+	margin-bottom:0;
+	float: right;
+}
+
+	#socialMedia ul {
+		list-style:none;
+	}
+
+	#socialMedia li {
+		overflow   :hidden;
+		text-indent:-9999px;
+		display    :block;
+		float      :right;
+		margin     :2px 2px 2px 2px;
+	}
+
+			#socialMedia li a {
+				background:url(<%= asset_path 'socialNav.png'%>) no-repeat;
+				display   :block;
+				height    :50px;
+				width     :48px;
+			}
+		
+				#socialMedia li.linkedIn a {
+						background-position: -9px -7px;
+				}
+
+				#socialMedia li.linkedIn a:hover {
+						background-position: -9px -67px;
+				}
+
+				#socialMedia li.twitter a {
+						background-position: -67px -7px;
+				}
+
+				#socialMedia li.twitter a:hover {
+						background-position: -67px -67px;
+				}
+
+				#socialMedia li.facebook a {
+						background-position: -126px -7px;
+				}
+
+				#socialMedia li.facebook a:hover {
+						background-position: -126px -67px;
+				}
+
+				#socialMedia li.rss a {
+						background-position: -184px -7px;
+				}
+
+				#socialMedia li.rss a:hover {
+						background-position: -184px -67px;
+				}
+
+#logo {
+	height       :75px;
+	margin-left  :25px;
+	margin-bottom:0px;
+}
+
+	#nav ul {
+		list-style:none;
+		text-align:right;
+		position  :relative;
+		margin    :0;
+		top       :30px;
+
+	}
+
+	#nav li {
+		display:inline;
+	}
+
+		#nav li a {
+		text-decoration: none;
+		text-align     : center;
+		}
+
+/*----------------------------------------------------------------------------- 
+=03 MAIN STAGE AND BODY ON HOMEPAGE
+-----------------------------------------------------------------------------*/
+
+#mainText {
+	position:relative;
+	top     :60px;
+}
+
+	#mainText h2 {
+		font-size    :28px;
+		line-height  :100%%;
+		margin-bottom:5px;
+		text-align   :left;
+	}
+
+	#mainText p {
+		color      :black;
+		font-size  :15px;
+		line-height:120%;
+		margin-top :5px;
+		display    :block;
+		font-weight:bold;
+	}
+
+#letsGo {
+	float: right;
+	display: block;
+}
+
+	#letsGo a {
+		font-size:16px;
+		float: right;
+		margin: 5px;
+		font-weight: bold;
+	}
+
+#mainImage{
+	background  :url(<%= asset_path 'vw_jetta_2_10-350.jpg' %>) no-repeat center;
+	height      :400px;
+	padding-left:20px;
+}
+
+#pullQuotes{
+	display   :block;
+	color     :#4B4D53;
+	margin-top:110px;
+}
+
+	#pullQuotes h4 {
+		margin-bottom:5px;
+		margin-left  :20px;
+		font-size    :18px;
+	}
+
+	#pullQuotes h5 {
+		text-align   :right;
+		font-size    :14px;
+	}
+
+
+/*----------------------------------------------------------------------------- 
+=05 TABS STYLING (from CSS Tricks.com)
+-----------------------------------------------------------------------------*/
+
+.ui-tabs { zoom: 1; }
+
+.ui-tabs .ui-tabs-nav { 
+	list-style: none; 
+	position  : relative; 
+	padding   : 2px 2px 0; 
+	overflow  : hidden; 
+	top       : 1px; 
+	z-index   : 1000;
+}
+
+.ui-tabs .ui-tabs-nav li { 
+	position           : relative; 
+	float              : left; 
+	border             : 1px solid #ccc; 
+	border-bottom-width: 0 !important; 
+	margin             : 0 2px -1px 0; 
+	background         : #ccc;
+}
+.ui-tabs .ui-tabs-nav li a { 
+	float          	   : left;
+	text-decoration    : none;
+	padding            : 5px 10px; 
+	color              : black; 
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected { 
+	padding-bottom     : 1px; 
+	border-bottom-width: 0; 
+	background         : white;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, 
+.ui-tabs .ui-tabs-nav li.ui-state-disabled a, 
+.ui-tabs .ui-tabs-nav li.ui-state-processing a { 
+	cursor 		: text; 
+}
+
+.ui-tabs .ui-tabs-nav li a, 
+.ui-tabs.ui-tabs-collapsible 
+.ui-tabs-nav li.ui-tabs-selected a  {
+	 cursor 	: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+
+.ui-tabs .ui-tabs-panel { 
+	padding     : 20px; 
+	display     : block; 
+	border-width: 0; 
+	background  : none; 
+	border      : 1px solid #ccc; 
+	position    : relative; 
+	min-height  : 200px; 
+}
+
+.ui-tabs .ui-tabs-hide 	{ 
+	display     : none !important; 
+}
+
+a.mover { 
+	background     : #7587C3; 
+	padding        : 6px 12px; 
+	position       : absolute;
+	color          : white; 
+	font-weight    : bold; 
+	text-decoration: none;
+}
+
+.next-tab { 
+	bottom: 0; 
+	right : 0; 
+}
+
+.prev-tab { 
+	bottom: 0; 
+	left  : 0; 
+ }
+
+/*----------------------------------------------------------------------------- 
+=04 QUESTION PAGE
+-----------------------------------------------------------------------------*/
+label {
+	width:150px;
+	float:left;
+}
+
+.input {
+	width                :50px;
+	border               :1px solid #ccc;
+	-webkit-border-radius:5px;
+	-moz-border-radius   :5px;
+	border-radius        :5px;
+}
+
+
+#progBox {
+	background      :#DEE3F6;
+	height          :405px;
+	margin-left 	:40px;
+	margin-bottom 	:69px;
+}
+
+	#progBox h3 {
+		padding 	:10px;
+
+	}
+
+	#progBox p {
+		padding-left 	:20px;
+		padding-right 	:10px;
+	}
+
+
+#tabs {
+	background      :#DEE3F6;
+	height          :400px;
+}
+
+.mainQuestion {
+	height 			:200px;
+	margin-left 	:80px;
+
+}
+	.mainQuestion h3 {
+		margin-left		:auto;
+		margin-right	:auto;
+		display 		:block;
+		height 			:100px;
+	}
+
+
+
+.sliderValue {
+	text-align		:center;
+	font-weight		:bold;
+	background-color:#B4FBBE !important; 
+}
+
+.sliderValueBox {
+	margin-left		:80px;
+	margin-top 		:10px;
+
+}
+
+#submitMe {
+	float  :right;		
+}
+	#submitMe a {
+		color      : white;
+		font-weight: bold;
+	}
+
+
+/*----------------------------------------------------------------------------- 
+=05 RESULTS PAGE
+-----------------------------------------------------------------------------*/
+
+#resultBoxLeft, #resultBoxRight {
+	-moz-border-radius:15px;
+	border-radius     :15px;
+	background        :#DEE3F6;
+	height            :400px;
+	margin-top        :15px;
+	padding-top       :15px;
+	
+}
+
+#resultBoxLeft {
+	margin-left       :10px;
+	padding-left      :10px;
+}
+
+	#resultBoxLeft h4 {
+		margin:px;
+	}
+
+	#resultBoxLeft p {
+		padding-right: 8px;
+	}
+
+#successButton {
+		color: white;
+	}
+
+#resultBoxRight {
+	margin-left:20px;
+}
+
+	#resultBoxRight img {
+		display     :block;
+		margin: auto;
+		border-width:2px;
+		border-style:solid;
+		border-color:#BDBDBD #FFFFFF #FFFFFF #BDBDBD;
+	}
+
+	#resultBoxRight h3 {
+		padding:10px;
+	}
+
+
+
+#noThanks {
+	display      :block;
+	position     :relative;
+	top          :90px;
+	float        :right;
+	padding-right:8px;
+	color 	     :black;
+}
+	#noThanks a {
+		color 	     :black;
+	}
+
+
+/*----------------------------------------------------------------------------- 
+=06 FOOTER
+-----------------------------------------------------------------------------*/
+
+#footer {
+	margin-top:25px;
+	text-align:right;
+	height    :50px;
+	float: 		:right;
+}
+
+
+
+/*----------------------------------------------------------------------------- 
+=08 MISC
+-----------------------------------------------------------------------------*/

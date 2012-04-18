@@ -1,37 +1,73 @@
 <% provide(:title, 'Home') %>
-<div id="stage" class="row">
+  <body>
 
-	
-		<div id="mainText" class="span6">
-			
-			<h2 class="span5 offset1"> Shopping for a car? <br/> Wondering where to start?
-			</h2>
+    <div id="wrapper" class="container">
+    	<div class="row">
+      		<div id="header" class="span12">
+			<div class="row">
+				<div id="logo" class="span6">
+				<a href="index.html"><%= image_tag ("eCarmony-logo.png") %> </a>
+				</div> <!--#logo-->
 
-			<div class="clear"></div>
-			
-			<p class="span4 offset1"> We can help! Answer 10 easy questions and we'll match you with the perfect car. It's totally free and takes less than 5 minutes.  Why not give it a try?
-			</p>
-			
-			<div class="clear"></div>
-			
-			<div id="letsGo" class="span2 offset3">
-				<aa class="btn btn-primary btn-large" href="ques_1.html" class="button">Let's Go!</a>
-			</div> <!--#letsGo-->
-			
-			<div class="clear"></div>
-			
-			<div id="pullQuotes" class = "span6 offset3">
+			<ul id="socialMedia" class="span5">
+				<li class="linkedIn"><a class="selected" href="#">LinkedIn</a></li>  
+				<li class="twitter"><a href="#">Twitter</a></li>
+				<li class="facebook"><a href="#">Facebook</a></li>
+				<li class="rss"><a href="#">Rss</a></li>
+			</ul>
 
-				<h4> "Amazeballs.  Literally the most incredible <br/>
-				 thing I've ever done on the internet." 
-				</h4>
+			</div> <!--#header-->
+		</div class="row">
+    
 
-				<h5>-Al Gore, Creator of Internet</h5>
-			</div> <!--#pullQuotes-->
+    <div id="stage" class="row">
+
+    	
+			<div id="mainText" class="span6">
+				
+				<h2 class="span5 offset1"> Shopping for a car? <br/> Wondering where to start?
+				</h2>
+
+				<div class="clear"></div>
+				
+				<p class="span4 offset1"> We can help! Answer 10 easy questions and we'll match you with the perfect car. It's totally free and takes less than 5 minutes.  Why not give it a try?
+				</p>
+				
+				<div class="clear"></div>
+				
+				<div id="letsGo" class="span2 offset3">
+					<a class="btn btn-primary btn-large" href="ques_1.html" class="button">Let's Go!</a>
+				</div> <!--#letsGo-->
+				
+				<div class="clear"></div>
+				
+				<div id="pullQuotes" class = "span6 offset3">
+
+					<h4> "Amazeballs.  Literally the most incredible <br/>
+					 thing I've ever done on the internet." 
+					</h4>
+
+					<h5>-Al Gore, Creator of Internet</h5>
+				</div> <!--#pullQuotes-->
+			
+			</div> <!--#mainText-->
+			
+			<div id="mainImage" class="span6">
+			</div> <!--#mainImage-->
 		
-		</div> <!--#mainText-->
+	</div> <!--#stage-->
+
+	<div id="footer" class="">
+			<div id="nav" class="">
+				<ul class="">
+					<li><a href="#">What is this?</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div> <!--#nav-->
 		
-		<div id="mainImage" class="span6">
-		</div> <!--#mainImage-->
-	
-</div> <!--#stage-->
+		</div> <!--#footer-->
+
+	</div> <!-- .container -->
+ 
+  </body>
+</html>
